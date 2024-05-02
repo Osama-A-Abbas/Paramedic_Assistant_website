@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact us | Paramedic Assistance</title>
+<link rel="stylesheet" href="contact.css">
+<script>
+    // Function to validate the name field
+    function nameValidation() {
+        let name = document.getElementById("fname").value;
+        if (name.length < 5) {
+            alert("Name must be more than 4 characters.");
+            return false;
+        }
+    }
+
+    // Function to handle the "Other" option in the subject dropdown
+    function selectHandler() {
+        let selected = document.getElementById("select");
+        let x = selected.options[selected.selectedIndex].text;
+        let other = document.getElementById("subject");
+        if (x == "Other") {
+            other.style.borderBlockColor = "White";
+            other.style.borderRightColor = "White";
+            other.style.borderLeftColor = "White";
+            other.disabled = false;
+            other.required = true;
+        } else {
+            other.style.borderBlockColor = "gray";
+            other.style.borderRightColor = "gray";
+            other.style.borderLeftColor = "gray";
+            other.disabled = true;
+            other.required = false;
+        }
+    }
+
+    // Function to get a daily message based on the day of the week
+    function getDailyMessage() {
+        // Array of daily messages
+        const messages = [
+            "Monday's message: Stay focused and motivated!",
+            "Tuesday's message: Take time to appreciate the little things.",
+            "Wednesday's message: Keep pushing forward, you're halfway there!",
+            "Thursday's message: Embrace challenges as opportunities for growth.",
+            "Friday's message: Celebrate your achievements and prepare for the weekend!",
+            "Saturday's message: Relax, unwind, and enjoy your weekend.",
+            "Sunday's message: Reflect on the week and set intentions for the week ahead."
+        ];
+
+        // Get the current day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+        const dayOfWeek = new Date().getDay();
+
+        // Display the daily message corresponding to the current day
+        document.getElementById("daily-message").textContent = messages[dayOfWeek];
+    }
+</script>
+</head>
+<body onload="getDailyMessage()">
+<header class="header">
+    <nav class="navbar">
+        <h2 class="logo"><a href="home.html">Paramedic Assistance</a></h2>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" id="hamburger-btn"></label>
+        <ul class="links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="goals.html">Goals</a></li>
+          <li><a href="progress.html">Progress</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- Contact Form Section -->
+<section class="hero-section">
+    <div class="hero">
+        <h2>Contact Us</h2>
+        <form action="submit.php" method="post" id="form" onsubmit="return nameValidation()">
+          <label for="name">Name:</label>
+            <input type="text" id="fname" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="select">Subject:</label>
+            <select id="select" onchange="selectHandler()">
+                <option value="">Registration</option>
+                <option value="">Members</option>
+                <option value="">Employment</option>
+                <option value="">Other</option>
+            </select><br><br>
+
+            <label for="subject">Other:</label>
+            <input class="subject" type="text" id="subject" name="subject" disabled>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="img">
+        <img src="images/logo2_2E.png" />
+    </div>
+</section>
+<script>
+  // Function to get a daily message based on the day of the week
+  function getDailyMessage() {
+      // Array of daily messages
+      const messages = [
+          "Monday's message: Stay focused and motivated!",
+          "Tuesday's message: Take time to appreciate the little things.",
+          "Wednesday's message: Keep pushing forward, you're halfway there!",
+          "Thursday's message: Embrace challenges as opportunities for growth.",
+          "Friday's message: Celebrate your achievements and prepare for the weekend!",
+          "Saturday's message: Relax, unwind, and enjoy your weekend.",
+          "Sunday's message: Reflect on the week and set intentions for the week ahead."
+      ];
+  
+      // Get the current day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+      const dayOfWeek = new Date().getDay();
+  
+      // Display the daily message corresponding to the current day
+      document.getElementById("daily-message").textContent = messages[dayOfWeek];
+  }
+  
+  // Call the function when the page loads
+  window.onload = getDailyMessage;
+  </script>
+  
+<!-- Daily Message Section -->
+<section class="daily-message-section">
+    <div class="daily-message">
+        <h3>Daily Message</h3>
+        <p id="daily-message">Loading...</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Paramedic Assistance. All rights reserved.</p>
+</footer>
+</body>
+</html>

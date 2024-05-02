@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goals | Paramedic Assistance</title>
+    <link rel="stylesheet" href="goals.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <h2 class="logo"><a href="home.html">Paramedic Assistance</a></h2>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" id="hamburger-btn"></label>
+            <ul class="links">
+                <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="goals.html">Goals</a></li>
+          <li><a href="progress.html">Progress</a></li>
+          <li><a href="content.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero">
+            <h1>Our Goals</h1>
+            <p>In the critical landscape of emergency medical services, the Paramedic Assistance Application (PA-app) emerges as a visionary solution poised to revolutionize pre-hospital care. Time is of the essence in emergency situations, and the current challenges faced by paramedics and hospitals in communication and decision-making can have profound impacts on patient outcomes. The PA-app, our proposed initiative, is designed to bridge these gaps, offering a cutting-edge platform that empowers paramedics with real-time patient information and seamless hospital selection capabilities.</p>
+        </div>
+
+
+        <div class="first-content">
+            <h2>Our Vision</h2>
+            <p>A pioneering, resilient, and sustainable ambulance service model.</p>
+        </div>
+        
+        <div class="second-content">
+            <h2>Our Mission</h2>
+            <p>To regulate and provide specialized, agile, and sustainable ambulance services that foresee the future...</p>
+        </div>
+
+        <div class="theard-content">
+            <h2>Our Values</h2>
+            <ul>
+                <li>Positivity</li>
+                <li>Professionalism</li>
+                <li>Team spirit</li>
+                <li>Integrity</li>
+                <li>Pride</li>
+            </ul>
+        </div>
+
+        <div class="buttons">
+            <a href="contact.html" class="join">Join Now</a>
+            <a href="about.html" class="learn">Learn More</a>
+        </div>
+        
+        <div class="img">
+            <img src="images/logo2_2E.png" />
+        </div>
+    </section>
+    <script>
+        // Function to get a daily message based on the day of the week
+        function getDailyMessage() {
+            // Array of daily messages
+            const messages = [
+                "Monday's message: Stay focused and motivated!",
+                "Tuesday's message: Take time to appreciate the little things.",
+                "Wednesday's message: Keep pushing forward, you're halfway there!",
+                "Thursday's message: Embrace challenges as opportunities for growth.",
+                "Friday's message: Celebrate your achievements and prepare for the weekend!",
+                "Saturday's message: Relax, unwind, and enjoy your weekend.",
+                "Sunday's message: Reflect on the week and set intentions for the week ahead."
+            ];
+        
+            // Get the current day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+            const dayOfWeek = new Date().getDay();
+        
+            // Display the daily message corresponding to the current day
+            document.getElementById("daily-message").textContent = messages[dayOfWeek];
+        }
+        
+        // Call the function when the page loads
+        window.onload = getDailyMessage;
+        </script>
+        
+    <!-- Daily Message Section -->
+<section class="daily-message-section">
+    <div class="daily-message">
+        <h3>Daily Message</h3>
+        <p id="daily-message">Loading...</p>
+    </div>
+</section>
+
+    <footer>
+        <p>&copy; 2024 Paramedic Assistance. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Paramedic Assistance</title>
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <h2 class="logo"><a href="#">Paramedic Assistance</a></h2>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" id="hamburger-btn"></label>
+        <ul class="links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="goals.html">Goals</a></li>
+          <li><a href="progress.html">Progress</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero-section">
+      <div class="hero1">
+        <h2>Our Story</h2>
+        <p>Welcome to Paramedic Assistant, where our top priority is to provide a safe and urgent way of communication between hospitals and paramedics,
+          our primary goal is to help paramedics in their very crucial mission to help those in need by providing them with an easy-to-use application that provides
+          quick communication and priority-based reports of nearby situations.</p>
+      </div>
+
+      <div class="hero2">
+        <h2>Our Team</h2>
+        <p>We are a passionate team of professionals dedicated to putting our expertise in programming by helping the medical industry with helpful applications.</p>
+      </div>
+
+      <div class="hero3">
+        <h2>Our Values</h2>
+        <p>At Paramedic Assistant, we believe in core values which you can find in our <a href="goals.html">Goals</a> page.</p>
+      </div>
+
+      <div class="hero4">
+        <h2>Team Members:</h2>
+        <div class="team-cards">
+          <!-- Card for Ahmed Almalki -->
+          <div class="team-card">
+            <h3>Ahmed Almalki</h3>
+            <p>Position: Project Manager</p>
+            <!-- Additional data can be added here -->
+          </div>
+
+          <!-- Card for Osamah Abbas -->
+          <div class="team-card">
+            <h3>Osamah Abbas</h3>
+            <p>Position: Website-Design Manager</p>
+            <!-- Additional data can be added here -->
+          </div>
+
+          <!-- Card for Bader Alasmari -->
+          <div class="team-card">
+            <h3>Bader Alasmari</h3>
+            <p>Position: Website-Design Manager Assistant</p>
+            <!-- Additional data can be added here -->
+          </div>
+
+          <!-- Card for Tamim Alotaibi -->
+          <div class="team-card">
+            <h3>Tamim Alotaibi</h3>
+            <p>Position: Relations Expert</p>
+            <!-- Additional data can be added here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Function to get a daily message based on the day of the week
+      function getDailyMessage() {
+          // Array of daily messages
+          const messages = [
+              "Monday's message: Stay focused and motivated!",
+              "Tuesday's message: Take time to appreciate the little things.",
+              "Wednesday's message: Keep pushing forward, you're halfway there!",
+              "Thursday's message: Embrace challenges as opportunities for growth.",
+              "Friday's message: Celebrate your achievements and prepare for the weekend!",
+              "Saturday's message: Relax, unwind, and enjoy your weekend.",
+              "Sunday's message: Reflect on the week and set intentions for the week ahead."
+          ];
+      
+          // Get the current day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+          const dayOfWeek = new Date().getDay();
+      
+          // Display the daily message corresponding to the current day
+          document.getElementById("daily-message").textContent = messages[dayOfWeek];
+      }
+      
+      // Call the function when the page loads
+      window.onload = getDailyMessage;
+      </script>
+      
+    <!-- Daily Message Section -->
+<section class="daily-message-section">
+  <div class="daily-message">
+      <h3>Daily Message</h3>
+      <p id="daily-message">Loading...</p>
+  </div>
+</section>
+
+    <footer>
+      &copy; 2024 Paramedic Assistant. All rights reserved.
+    </footer>
+  </body>
+</html>

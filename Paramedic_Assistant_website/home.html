@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Paramedic Assistance</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <h2 class="logo"><a href="#">Paramedic Assistance</a></h2>
+        <label for="menu-toggle" id="hamburger-btn">
+            
+        </label>
+        <ul class="links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="goals.html">Goals</a></li>
+          <li><a href="progress.html">Progress</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        
+      </nav>
+    </header>
+    <section class="hero-section">
+      <div class="hero">
+        <h2>Turning the impossible into reality to save lives</h2>
+        <p>
+            Revolutionizing healthcare
+            with innovative solutions 
+            for the modern world.
+        </p>
+        <div class="buttons">
+          <a href="#" class="join">Join Now</a>
+          <a href="goals.html" class="learn">Learn More</a>
+        </div>
+      </div>
+      <div class="img">
+        <img src="images/logo2_2E.png" />
+      </div>
+    </section>
+    <script>
+      // Function to get a daily message based on the day of the week
+      function getDailyMessage() {
+          // Array of daily messages
+          const messages = [
+              "Monday's message: Stay focused and motivated!",
+              "Tuesday's message: Take time to appreciate the little things.",
+              "Wednesday's message: Keep pushing forward, you're halfway there!",
+              "Thursday's message: Embrace challenges as opportunities for growth.",
+              "Friday's message: Celebrate your achievements and prepare for the weekend!",
+              "Saturday's message: Relax, unwind, and enjoy your weekend.",
+              "Sunday's message: Reflect on the week and set intentions for the week ahead."
+          ];
+      
+          // Get the current day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+          const dayOfWeek = new Date().getDay();
+      
+          // Display the daily message corresponding to the current day
+          document.getElementById("daily-message").textContent = messages[dayOfWeek];
+      }
+      
+      // Call the function when the page loads
+      window.onload = getDailyMessage;
+      </script>
+      
+    <!-- Daily Message Section -->
+<section class="daily-message-section">
+  <div class="daily-message">
+      <h3>Daily Message</h3>
+      <p id="daily-message">Loading...</p>
+  </div>
+</section>
+<footer>
+    <p>&copy; 2024 Paramedic Assistance. All rights reserved.</p>
+</footer>
+  </body>
+</html>
